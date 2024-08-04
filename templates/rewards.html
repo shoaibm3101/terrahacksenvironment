@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Card Rewards</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'rewards.css' %}">
+</head>
+<body>
+    <section class="rewards-section">
+        <h2>Our Rewards</h2>
+        <div class="rewards-container">
+            <div class="reward-item">
+                <div class="icon">🎁</div>
+                <h3>Amazon Gift Card</h3>
+                <p>$50 value</p>
+            </div>
+            <div class="reward-item">
+                <div class="icon">🎁</div>
+                <h3>Starbucks Gift Card</h3>
+                <p>$25 value</p>
+            </div>
+            <div class="reward-item">
+                <div class="icon">🎁</div>
+                <h3>iTunes Gift Card</h3>
+                <p>$100 value</p>
+            </div>
+            <div class="reward-item">
+                <div class="icon">🎁</div>
+                <h3>Walmart Gift Card</h3>
+                <p>$75 value</p>
+            </div>
+            <div class="reward-item">
+                <div class="icon">🎁</div>
+                <h3>Google Play Gift Card</h3>
+                <p>$50 value</p>
+            </div>
+            <div class="reward-item">
+                <div class="icon">🎁</div>
+                <h3>Best Buy Gift Card</h3>
+                <p>$100 value</p>
+            </div>
+            <div class="reward-item">
+                <div class="icon">🎁</div>
+                <h3>Coscto Gift Card</h3>
+                <p>$125 value</p>
+            </div>
+            <div class="reward-item">
+                <div class="icon">🎁</div>
+                <h3>Nike Gift Card</h3>
+                <p>$150 value</p>
+            </div>
+        </div>
+        <a class="button" href="{% url 'home' %}">Home</a>
+    </section>
+</body>
+</html>

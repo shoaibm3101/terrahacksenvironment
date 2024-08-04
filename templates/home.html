@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%  static 'home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Not Eco Friendly? | Start Now</title>
+</head>
+<body>
+
+    
+    
+    <!-- Navbar -->
+    <div class="cover">
+        <video class="background-video" autoplay loop muted plays-inline>
+            <source src="{%  static 'images/home_background.mp4' %}" type="video/mp4">
+        </video>
+        <section class="navbar-container">
+            <nav>
+                <div class="nav-left">
+                    <a href="{% url 'home' %}">Home</a>
+                </div>
+                <div class="nav-right">
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'logout' %}">Log out</a>
+                    <a href="{% url 'login' %}">Log in</a>
+                    <a href="{% url 'signup' %}">Sign in</a>
+                    <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </nav>
+         </section>
+         <div class="title">
+            <h1>GreenPulse</h1>
+         </div>
+    </div>
+
+     <!-- Hero -->
+      <section class="hero">
+        <div class="hero-container">
+            <div class="hero-card">
+                <h1>Rewards</h1>
+                <p>Discover the various rewards available based on how ecofriendly you are. The higher the score, the better the rewards!</p>
+                <a class="btn" href="{% url 'rewards' %}">Take me</a>
+            </div>
+            <div class="hero-card">
+                <h1>Leaderboard</h1>
+                <p>See where you rank amongst other individuals like yourself, can you compete to be the most eco friendly citizen?</p>
+                <a class="btn" href="{% url 'leaderboard' %}">Take me</a>
+            </div>
+            <div class="hero-card">
+                <h1>About</h1>
+                <p>Learn more about us, our values, and our mission. We follow a strict rule set for the lowest environmental impact</p>
+                <a class="btn" href="{% url 'about' %}">Take me</a>
+            </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+       <!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <h1>Become Eco Friendly Today!</h1>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Environmentally. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>

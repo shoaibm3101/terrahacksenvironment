@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+</head>
+<body>
+    
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>{{request.user}}</h1>
+        </div>
+        <div class="profile-details">
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Score:</strong> {{ user.profile.score }}</p>
+        </div>
+        <a href="{% url 'home' %}" class="button">Home</a>
+    </div>
+</body>
+</html>

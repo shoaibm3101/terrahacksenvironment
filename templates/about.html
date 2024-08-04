@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About Us | Start Now</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="cover">
+        <video class="background-video" autoplay loop muted plays-inline>
+            <source src="{%  static 'images/home_background.mp4' %}" type="video/mp4">
+        </video>
+        <section class="navbar-container">
+            <nav>
+                <div class="nav-left">
+                    <a href="{% url 'home' %}">Home</a>
+                </div>
+                <div class="nav-right">
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'logout' %}">Log out</a>
+                    <a href="{% url 'login' %}">Log in</a>
+                    <a href="{% url 'signup' %}">Sign in</a>
+                    <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </nav>
+         </section>
+    </div>
+
+    <!-- Main Content -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <div class="about-text-item">
+                    <h1>About Us</h1>
+                    <p>We are 3 highly motivated individuals who are determined to keep the envoirnment safe, clean and healthy</p>
+                </div>
+                <div class="about-text-item">
+                    <h1>Our Mission</h1>
+                    <p>Our mission is to provide personalized innovative solutions that help you become an eco-friendly citizen.</p>
+                </div>
+            </div>
+            <p class="quote">"First incrementally, then exponentially"</p>
+            <div class="video_below">
+                <h2>Our Team</h2>
+                <div class="team">
+                    <div class="team-member">
+                        <h3>Hamza Yousaf</h3>
+                        <p>Frontend lead developer</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Shoaib Mustafa</h3>
+                        <p>Backend lead developer</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Muhammad Sayed</h3>
+                        <p>Team organizer | Frontend developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+         <h1>We hope to make you and the enviornment safer!</h1>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Enviornmentally. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

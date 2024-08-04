@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{%  static 'signup.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.username.label}}
+        {{form.username}}
+
+        {{form.email.label}}
+        {{form.email}}
+
+        {{form.password1.label}}
+        {{form.password1}}
+
+        {{form.password2.label}}
+        {{form.password2}}
+
+        <label>Score</label>
+        <input id="score" name="score" required>
+
+        <ul>
+            {% for question_obj in questions %}
+
+            <li>{{question_obj.question}} /5</li>
+            
+            {% endfor %}
+        </ul>
+        
+
+        {{form.errors}}
+
+        <h3>Add Up Your Scores and Insert it into the Score Box</h3>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
